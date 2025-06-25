@@ -7,7 +7,7 @@ on:
 env:
   PROJECT_ID: devops-464013
   REGION: us-central1
-  SERVICE_NAME: quote-app
+  SERVICE_NAME: quotes
   REPO_NAME: quotes-repo
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       with:
         
         workload_identity_provider: 'projects/233936726660/locations/global/workloadIdentityPools/github-actions-pool/providers/github-provider'
-        service_account: 'quote-deployer@devops-464013.iam.gserviceaccount.com'
+        service_account: 'quote-deployer-266@devops-464013.iam.gserviceaccount.com'
 
     - name: Set up gcloud CLI
       uses: google-github-actions/setup-gcloud@v2
